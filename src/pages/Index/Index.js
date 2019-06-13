@@ -1,10 +1,11 @@
 import React from 'react';
+import PageTemplate from '../../templates/PageTemplate/PageTemplate';
 
 const Index = () => {
    return (
-      <div>
+      <PageTemplate>
          <div></div>
-      </div>
+      </PageTemplate>
    );
 };
 
