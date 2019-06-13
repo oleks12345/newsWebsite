@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 
 import { theme } from 'assets/styles/theme';
 import GlobalStyle from 'assets/styles/GlobalStyle';
+import NavBar from '../../components/NavBar/NavBar';
 
 const PageTemplate = ( { children } ) => {
    return (
       <ThemeProvider theme={ theme }>
          <>
             <GlobalStyle />
+            <NavBar />
             { children }
          </>
       </ThemeProvider>
