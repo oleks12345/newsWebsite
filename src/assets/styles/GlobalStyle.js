@@ -33,6 +33,9 @@ const GlobalStyle = createGlobalStyle`
       font-weight: ${( { theme } ) => theme.font.weight.semibold};
    }
 
+   a {
+      color: ${( { theme } ) => theme.link};
+   }
 `;
 
 export default GlobalStyle;
