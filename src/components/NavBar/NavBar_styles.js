@@ -52,6 +52,7 @@ export const StyledNav = styled.nav`
       position: static;
       flex-direction: row;
       transform: none;
+      transition: none;
       opacity: 1;
    }
 `;
@@ -64,6 +65,7 @@ export const NavSearch = styled.form`
 
    ${( props ) => props.theme.mdq.md} {
       transform: none;
+      transition: none;
    }
 `;
 
@@ -101,6 +103,8 @@ export const NavList = styled.ul`
    ${( props ) => props.theme.mdq.md} {
       flex-direction: row;
       transform: none;
+
+      transition: none;
    }
 `;
 
