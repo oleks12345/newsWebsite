@@ -1,7 +1,8 @@
 export const theme = {
    white: '#ffffff',
    primary: '#1a1a1d',
-   link: '#89bdd3',
+   secondary: '#343231',
+   link: '#0074D9',
    font: {
       size: {
          xs: '1.4rem',
@@ -19,6 +20,7 @@ export const theme = {
    },
    maxWidth: '1080px',
    mdq: {
+      sm: '@media (min-width: 640px)',
       md: '@media (min-width: 768px)',
       lg: '@media (min-width: 1024px)',
       xl: '@media(min-width: 1440px)',
