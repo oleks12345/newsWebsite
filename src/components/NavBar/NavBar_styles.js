@@ -8,13 +8,17 @@ export const StyledHeader = styled.header`
    width: 100%;
    max-width: ${( { theme } ) => theme.maxWidth};
    margin: 0 auto;
-   padding: 10px;
+   padding: 10px 10%;
    display: flex;
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-between;
    height: 70px;
    background-color: ${( { theme } ) => theme.white};
    z-index: 100;
+   ${( props ) => props.theme.mdq.sm} {
+      justify-content: space-around;
+      padding: 10px;
+   }
 `;
 
 export const HeaderBrand = styled.div`
@@ -22,7 +26,6 @@ export const HeaderBrand = styled.div`
    font-size: ${( { theme } ) => theme.font.size.l};
    font-weight: ${( { theme } ) => theme.font.weight.bold};
    color: ${( { theme } ) => theme.secondary};
-   flex-grow: 1;
    text-align: center;
    background-color: ${( { theme } ) => theme.white};
    z-index: 100;
@@ -33,17 +36,35 @@ export const StyledNav = styled.nav`
    flex-direction: column;
    align-items: center;
    justify-content: space-around;
-   flex-grow: 2;
-   position: absolute;
+   position: fixed;
    top: 70px;
-   background: #ddd;
-   transform: translateY(0);
-   transition: 1s;
+   left: 0;
+   width: 100%;
+   background-color: ${( { theme } ) => theme.white};
+   transform-origin: center 0;
+   opacity: ${( { isOpen } ) => ( isOpen ? 1 : 0 )};
+   transform: translateX(${( { isOpen } ) => ( isOpen ? 0 : 100 )}%);
+   transition: opacity 0.5s, transform 0s ${( { isOpen } ) => ( isOpen ? 0 : 0.5 )}s;
    z-index: -1;
+
+   ${( props ) => props.theme.mdq.md} {
+      width: auto;
+      position: static;
+      flex-direction: row;
+      transform: none;
+      opacity: 1;
+   }
 `;
 
 export const NavSearch = styled.form`
    position: relative;
+
+   transform: translateX(${( { isOpen } ) => ( isOpen ? 0 : 100 )}%);
+   transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+   ${( props ) => props.theme.mdq.md} {
+      transform: none;
+   }
 `;
 
 export const SearchInput = styled.input`
@@ -69,15 +90,27 @@ export const SearchImg = styled.img`
 `;
 
 export const NavList = styled.ul`
+   width: 100%;
    padding: 0;
-   margin: 0;
+   margin: 0 20px;
    list-style: none;
    display: flex;
    flex-direction: column;
+   transform: translateX(${( { isOpen } ) => ( isOpen ? 0 : 100 )}%);
+   transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+   ${( props ) => props.theme.mdq.md} {
+      flex-direction: row;
+      transform: none;
+   }
 `;
 
-export const NavItem = styled.li``;
+export const NavItem = styled.li`
+   text-align: center;
+   padding: 10px 20px;
+`;
 
 export const NavLink = styled.a`
+   width: 100%;
+   height: 100%;
    text-decoration: none;
 `;
