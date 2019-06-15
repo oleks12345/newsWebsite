@@ -1,10 +1,13 @@
 import React from 'react';
+import { ArticlesSection, ArticlesWrapper, Article } from './Articles_styles';
 
 const Articles = () => {
    return (
-      <div>
-         <div>Articles</div>
-      </div>
+      <ArticlesSection>
+         <ArticlesWrapper>
+            <Article>Article1</Article>
+         </ArticlesWrapper>
+      </ArticlesSection>
    );
 };
 
