@@ -77,7 +77,7 @@ export const SearchInput = styled.input`
    padding: 5px;
 `;
 
-export const SearchButton = styled.form`
+export const SearchButton = styled.button`
    position: absolute;
    right: 0px;
    top: 0;
@@ -85,6 +85,8 @@ export const SearchButton = styled.form`
    height: 100%;
    display: flex;
    align-items: center;
+   background-color: transparent;
+   border: none;
 `;
 
 export const SearchImg = styled.img`
