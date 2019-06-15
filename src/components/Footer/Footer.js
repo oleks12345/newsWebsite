@@ -1,17 +1,18 @@
 import React from 'react';
+import { StyledFooter, FooterWrapper } from './Footer_styles';
 
 const Footer = () => {
    return (
-      <footer>
-         <div>
+      <StyledFooter>
+         <FooterWrapper>
             <p>
-               &copy; <a href="https://oleks.pl">oleks.pl</a>
+               &copy; 2019 <a href="https://oleks.pl">oleks.pl</a>
             </p>
             <p>
-               powered by <a href="https://newsapi.org">NewsAPI.org</a>
+               Powered by <a href="https://newsapi.org">NewsAPI.org</a>
             </p>
-         </div>
-      </footer>
+         </FooterWrapper>
+      </StyledFooter>
    );
 };
 
