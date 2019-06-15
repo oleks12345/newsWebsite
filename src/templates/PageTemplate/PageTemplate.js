@@ -14,7 +14,6 @@ const PageTemplate = ( { children } ) => {
             <GlobalStyle />
             <NavBar />
             { children }
-            <div style={ { height: ' 150vh', background: '#eee' } }></div>
             <Footer />
          </>
       </ThemeProvider>
