@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { theme } from 'assets/styles/theme';
 import GlobalStyle from 'assets/styles/GlobalStyle';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 
 const PageTemplate = ( { children } ) => {
    return (
@@ -14,6 +15,7 @@ const PageTemplate = ( { children } ) => {
             <NavBar />
             { children }
             <div style={ { height: ' 150vh', background: '#eee' } }></div>
+            <Footer />
          </>
       </ThemeProvider>
    );
