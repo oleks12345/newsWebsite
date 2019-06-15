@@ -47,6 +47,8 @@
          "children": true
       } ],
 
+      "brace-style": [ 1, "stroustrup" ],
+
       "lines-between-class-members": [ 1, "always" ],
       "padding-line-between-statements": [
          "error",
