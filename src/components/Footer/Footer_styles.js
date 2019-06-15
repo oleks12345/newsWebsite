@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
 
 export const StyledFooter = styled.footer`
    background-color: ${( { theme } ) => theme.secondary};
@@ -23,4 +24,7 @@ export const FooterWrapper = styled.div`
       justify-content: space-between;
       padding: 0.5em 2em;
    }
+`;
+export const FooterLink = styled.a`
+   color: ${( { theme } ) => lighten( 0.2, theme.link )};
 `;
