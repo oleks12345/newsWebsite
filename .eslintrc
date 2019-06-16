@@ -66,6 +66,16 @@
             "blankLine": "always",
             "prev": "*",
             "next": "return"
+         },
+         {
+            "blankLine": "always",
+            "prev": "*",
+            "next": "export"
+         },
+         {
+            "blankLine": "always",
+            "prev": "export",
+            "next": "*"
          }
 
       ]
