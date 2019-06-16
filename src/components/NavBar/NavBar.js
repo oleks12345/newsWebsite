@@ -38,7 +38,7 @@ const NavBar = () => {
          <StyledNav isOpen={ isMenuOpen }>
             <NavSearch isOpen={ isMenuOpen }>
                <SearchInput { ...searchInput }></SearchInput>
-               <SearchButton>
+               <SearchButton type="submit">
                   <SearchImg src={ IconSearch } alt="" />{ ' ' }
                </SearchButton>
             </NavSearch>
