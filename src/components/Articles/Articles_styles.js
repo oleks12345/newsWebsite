@@ -4,6 +4,7 @@ export const ArticlesSection = styled.main`
    padding-top: 70px;
    min-height: 100vh;
 `;
+
 export const ArticlesWrapper = styled.div`
    max-width: ${( { theme } ) => theme.maxWidth};
    margin: 0 auto;

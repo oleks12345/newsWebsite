@@ -25,6 +25,7 @@ export const FooterWrapper = styled.div`
       padding: 0.5em 2em;
    }
 `;
+
 export const FooterLink = styled.a`
    color: ${( { theme } ) => lighten( 0.2, theme.link )};
 `;

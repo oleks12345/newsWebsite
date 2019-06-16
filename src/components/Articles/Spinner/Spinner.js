@@ -13,6 +13,7 @@ const Spinner = () => (
       />
    </StyledSpinner>
 );
+
 export default Spinner;
 
 //credit https://gist.github.com/knowbody/578b35164b69e867ed4913423f6bed30
