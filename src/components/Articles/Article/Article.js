@@ -16,28 +16,31 @@ const Article = ( { data } ) => {
    ) => {
       const reserve = words * 0.1;
 
-      if ( description.length > words + reserve ) {
-         for ( let i = words; i < description.length; i++ ) {
-            const currentChar = description[i];
+      if ( description )
+         if ( description.length > words + reserve ) {
+            for ( let i = words; i < description.length; i++ ) {
+               const currentChar = description[i];
 
-            if (
-               currentChar === ' ' ||
-               currentChar === ',' ||
-               currentChar === '.'
-            ) {
-               return description.slice( 0, i ) + '...';
+               if (
+                  currentChar === ' ' ||
+                  currentChar === ',' ||
+                  currentChar === '.'
+               ) {
+                  return description.slice( 0, i ) + '...';
+               }
             }
          }
-      }
 
       return description;
    };
 
    const cutDateAtDays = ( date = '' ) => {
-      const tPosition = date.indexOf( 'T' );
+      if ( date ) {
+         const tPosition = date.indexOf( 'T' );
 
-      if ( tPosition > 1 ) {
-         return date.slice( 0, tPosition );
+         if ( tPosition > 1 ) {
+            return date.slice( 0, tPosition );
+         }
       }
 
       return date;
