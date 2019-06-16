@@ -36,7 +36,7 @@ const Article = ( { data } ) => {
    const cutDateAtDays = ( date = '' ) => {
       const tPosition = date.indexOf( 'T' );
 
-      if ( tPosition ) {
+      if ( tPosition > 1 ) {
          return date.slice( 0, tPosition );
       }
 
