@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const StyledArticle = styled.article`
    width: 100%;
-   padding: 0 20px;
+   padding: 20px;
    ${( { theme } ) => theme.mdq.xs} {
       width: 50%;
-      padding: 0 10px;
+      padding: 10px;
    }
    ${( { theme } ) => theme.mdq.md} {
       width: 33%;
@@ -16,6 +16,8 @@ export const StyledArticle = styled.article`
 `;
 
 export const ArticleLink = styled.a`
+   display: block;
+   height: 100%;
    text-decoration: none;
    color: inherit;
 `;
