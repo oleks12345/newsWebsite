@@ -19,16 +19,3 @@ export const ArticlesLoading = styled.div`
    padding: 10%;
    align-items: center;
 `;
-
-export const Article = styled.article`
-   width: 100%;
-   ${( { theme } ) => theme.mdq.sm} {
-      width: 50%;
-   }
-   ${( { theme } ) => theme.mdq.md} {
-      width: 33%;
-   }
-   ${( { theme } ) => theme.mdq.lg} {
-      width: 25%;
-   }
-`;
