@@ -61,7 +61,12 @@ const Article = ( { data } ) => {
 };
 
 Article.propTypes = {
-   data: PropTypes.shape().isRequired,
+   data: PropTypes.shape( {
+      title: PropTypes.string,
+      publishedAt: PropTypes.string,
+      urlToImage: PropTypes.string,
+      description: PropTypes.string,
+   } ).isRequired,
 };
 
 export default Article;
