@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
    }
 
    h2, h3 {
-      font-weight: ${( { theme } ) => theme.font.weight.semibold};
+      font-weight: ${( { theme } ) => theme.font.weight.semiBold};
    }
 
    a {
