@@ -2,15 +2,16 @@ import React, { useEffect, useState } from 'react';
 import {
    ArticlesSection,
    ArticlesWrapper,
-   Article,
    ArticlesLoading,
 } from './Articles_styles';
 import Spinner from './Spinner/Spinner';
+import Article from './Article/Article';
 
 const Articles = () => {
    const [ articleList, setArticleList ] = useState( [] );
-   const [ isLoaded, setIsLoaded ] = useState( false );
+   const [ isLoaded, setIsLoaded ] = useState( true );
    const [ errorMessage, setErrorMessage ] = useState( '' );
+
    useEffect( () => {
       const abortController = new AbortController();
 
@@ -66,9 +67,9 @@ const Articles = () => {
    }, [] );
 
    const mapArticles = () => {
-      const articles = articleList.map( ( article ) => {
-         <Article data={ article }></Article>;
-      } );
+      const articles = articleList.map( ( article ) => (
+         <Article key={ article.title } data={ article }></Article>
+      ) );
 
       return articles;
    };
