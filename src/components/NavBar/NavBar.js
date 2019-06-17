@@ -37,7 +37,7 @@ const NavBar = () => {
          <Hamburger onClick={ handleMenuClick } isOpen={ isMenuOpen } />
          <StyledNav isOpen={ isMenuOpen }>
             <NavSearch isOpen={ isMenuOpen }>
-               <SearchInput { ...searchInput }></SearchInput>
+               <SearchInput { ...searchInput } name="q" />
                <SearchButton type="submit">
                   <SearchImg src={ IconSearch } alt="" />{ ' ' }
                </SearchButton>
