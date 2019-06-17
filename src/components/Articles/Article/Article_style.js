@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledArticle = styled.article`
    width: 100%;
    padding: 20px;
-   ${( { theme } ) => theme.mdq.xs} {
+   ${( { theme } ) => theme.mdq.sm} {
       width: 50%;
       padding: 10px;
    }
