@@ -2,9 +2,13 @@ import styled from 'styled-components';
 
 export const StyledArticle = styled.article`
    width: 100%;
+   max-width: 400px;
    padding: 20px;
-   ${( { theme } ) => theme.mdq.xs} {
+   margin: 0 auto;
+   ${( { theme } ) => theme.mdq.sm} {
+      max-width: none;
       width: 50%;
+
       padding: 10px;
    }
    ${( { theme } ) => theme.mdq.md} {
