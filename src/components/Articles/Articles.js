@@ -14,9 +14,14 @@ const Articles = () => {
 
    useEffect( () => {
       const abortController = new AbortController();
+      const url = new URL( document.location.href );
+
+      const query = url.searchParams.get( 'q' );
 
       fetch(
-         `https://newsapi.org/v2/top-headlines?country=pl&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`,
+         `https://newsapi.org/v2/top-headlines?country=pl${
+            query ? '&q=' + query : ''
+         }&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`,
          { signal: abortController.signal }
       )
          .then( ( res ) => res.json() )
@@ -29,11 +34,21 @@ const Articles = () => {
             }
          } )
          .then( ( articles ) => {
-            setArticleList( articles );
-            setIsLoaded( true );
+            if ( articles.length === 0 ) {
+               throw Error( 'noArticles' );
+            }
+            else {
+               setArticleList( articles );
+               setIsLoaded( true );
+            }
          } )
          .catch( ( err ) => {
             switch ( err.message ) {
+            case 'noArticles':
+               setErrorMessage(
+                  'No articles found, please try searching for something else.'
+               );
+               break;
             case 'apiKeyMissing':
                setErrorMessage( 'Api key is missing' );
                break;
