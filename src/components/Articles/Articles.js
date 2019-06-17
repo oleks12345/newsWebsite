@@ -9,7 +9,7 @@ import Article from './Article/Article';
 
 const Articles = () => {
    const [ articleList, setArticleList ] = useState( [] );
-   const [ isLoaded, setIsLoaded ] = useState( true );
+   const [ isLoaded, setIsLoaded ] = useState( false );
    const [ errorMessage, setErrorMessage ] = useState( '' );
 
    useEffect( () => {
