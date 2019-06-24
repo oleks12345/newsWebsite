@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
    position: fixed;
@@ -115,7 +116,7 @@ export const NavItem = styled.li`
    padding: 10px 20px;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled( Link )`
    width: 100%;
    height: 100%;
    text-decoration: none;

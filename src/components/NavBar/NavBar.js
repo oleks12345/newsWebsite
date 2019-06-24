@@ -44,16 +44,16 @@ const NavBar = () => {
             </NavSearch>
             <NavList isOpen={ isMenuOpen }>
                <NavItem>
-                  <NavLink href="#home">Link</NavLink>
+                  <NavLink to="/">News</NavLink>
                </NavItem>
                <NavItem>
-                  <NavLink href="#home">Link2</NavLink>
+                  <NavLink to="/weather">Weather</NavLink>
                </NavItem>
                <NavItem>
-                  <NavLink href="#home">Link3</NavLink>
+                  <NavLink to="/two">Link3</NavLink>
                </NavItem>
                <NavItem>
-                  <NavLink href="#home">Link4</NavLink>
+                  <NavLink to="/three">Link4</NavLink>
                </NavItem>
             </NavList>
          </StyledNav>
