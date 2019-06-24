@@ -1,8 +1,12 @@
 import styled from 'styled-components';
 
 export const ArticlesSection = styled.main`
-   padding-top: 70px;
-   min-height: 100vh;
+   margin-top: 70px;
+   padding-top: 25px;
+   min-height: calc(100vh - 70px - 61px);
+   ${( { theme } ) => theme.mdq.sm} {
+      min-height: calc(100vh - 70px - 70px);
+   }
 `;
 
 export const ArticlesWrapper = styled.div`
