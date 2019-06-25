@@ -58,42 +58,6 @@ export const StyledNav = styled.nav`
    }
 `;
 
-export const NavSearch = styled.form`
-   position: relative;
-
-   transform: translateX(${( { isOpen } ) => ( isOpen ? 0 : 100 )}%);
-   transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-
-   ${( props ) => props.theme.mdq.md} {
-      transform: none;
-      transition: none;
-   }
-`;
-
-export const SearchInput = styled.input`
-   display: block;
-   height: 35px;
-   border: 1px solid ${( { theme } ) => theme.secondary};
-   border-radius: 10px;
-   padding: 5px;
-`;
-
-export const SearchButton = styled.button`
-   position: absolute;
-   right: 0px;
-   top: 0;
-   padding: 2px 5px;
-   height: 100%;
-   display: flex;
-   align-items: center;
-   background-color: transparent;
-   border: none;
-`;
-
-export const SearchImg = styled.img`
-   height: 100%;
-`;
-
 export const NavList = styled.ul`
    width: 100%;
    padding: 0;
