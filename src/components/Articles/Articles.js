@@ -6,18 +6,22 @@ import {
 } from './Articles_styles';
 import Spinner from './Spinner/Spinner';
 import Article from './Article/Article';
+import Search from '../Search/Search';
 
 const Articles = () => {
    const [ articleList, setArticleList ] = useState( [] );
    const [ isLoaded, setIsLoaded ] = useState( false );
    const [ errorMessage, setErrorMessage ] = useState( '' );
+   const [ query, setQuery ] = useState(
+      new URL( document.location.href ).searchParams.get( 'q' )
+   );
 
    useEffect( () => {
       const abortController = new AbortController();
-      const url = new URL( document.location.href );
 
-      const query = url.searchParams.get( 'q' );
-
+      setIsLoaded( false );
+      setErrorMessage( '' );
+      setArticleList( [] );
       fetch( `https://oleks.pl/api/news/${query ? '?q=' + query : ''}`, {
          signal: abortController.signal,
       } )
@@ -76,7 +80,7 @@ const Articles = () => {
       return () => {
          abortController.abort();
       };
-   }, [] );
+   }, [ query ] );
 
    const mapArticles = () => {
       const articles = articleList.map( ( article ) => (
@@ -88,6 +92,7 @@ const Articles = () => {
 
    return (
       <ArticlesSection>
+         <Search setQuery={ setQuery } query={ query } />
          { isLoaded ? (
             <ArticlesWrapper>{ mapArticles() }</ArticlesWrapper>
          ) : (

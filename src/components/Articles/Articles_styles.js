@@ -4,6 +4,9 @@ export const ArticlesSection = styled.main`
    margin-top: 70px;
    padding-top: 25px;
    min-height: calc(100vh - 70px - 61px);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    ${( { theme } ) => theme.mdq.sm} {
       min-height: calc(100vh - 70px - 70px);
    }
