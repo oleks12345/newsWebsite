@@ -7,6 +7,7 @@ const ErrorPage = () => {
    return (
       <Wrapper>
          <ErrorMessage> Page not found</ErrorMessage>
+         <p>website is still work in progress</p>
          <Link to="/">Go back to homepage</Link>
       </Wrapper>
    );

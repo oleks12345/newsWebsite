@@ -10,7 +10,7 @@ const App = () => {
       <BrowserRouter>
          <PageTemplate>
             <Switch>
-               <Route exact path="/" component={ Index } />
+               <Route exact path="/news" component={ Index } />
                <Route component={ ErrorPage } />
             </Switch>
          </PageTemplate>
