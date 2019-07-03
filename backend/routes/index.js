@@ -4,7 +4,7 @@ const fetch = require( 'node-fetch' );
 const router = express.Router();
 
 /* GET home page. */
-router.get( '/api/news', function( req, res ) {
+router.get( '/', function( req, res ) {
    fetch(
       `https://newsapi.org/v2/top-headlines?country=pl${
          req.query.q ? '&q=' + req.query.q : ''
