@@ -18,7 +18,7 @@ const Articles = () => {
 
       const query = url.searchParams.get( 'q' );
 
-      fetch( `https://oleks.pl/api/news/${query ? '&q=' + query : ''}`, {
+      fetch( `https://oleks.pl/api/news/${query ? '?q=' + query : ''}`, {
          signal: abortController.signal,
       } )
          .then( ( res ) => res.json() )
