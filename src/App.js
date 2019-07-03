@@ -7,10 +7,10 @@ import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 const App = () => {
    return (
-      <BrowserRouter>
+      <BrowserRouter basename="/news/">
          <PageTemplate>
             <Switch>
-               <Route exact path="/news" component={ Index } />
+               <Route exact path="/" component={ Index } />
                <Route component={ ErrorPage } />
             </Switch>
          </PageTemplate>
