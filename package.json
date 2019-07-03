@@ -2,7 +2,7 @@
    "name": "news-website",
    "version": "0.1.0",
    "private": true,
-   "homepage": ".",
+   "homepage": "/news",
    "dependencies": {
       "babel-plugin-styled-components": "^1.10.0",
       "enzyme": "^3.10.0",
