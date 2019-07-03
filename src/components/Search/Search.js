@@ -1,6 +1,8 @@
 import React from 'react';
 import IconSearch from 'assets/images/iconSearch.svg';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+
 import {
    SearchForm,
    SearchInput,
@@ -9,11 +11,13 @@ import {
 } from './Search_styles';
 import { useInput } from '../../utils/customHooks';
 
-const Search = ( { query, setQuery } ) => {
+const Search = ( { query, setQuery, history } ) => {
    const searchInput = useInput( query );
 
    const formSubmit = ( e ) => {
       e.preventDefault();
+      history.push( { search: `?q=${searchInput.value}` } );
+
       setQuery( searchInput.value );
    };
 
@@ -30,9 +34,10 @@ const Search = ( { query, setQuery } ) => {
 Search.propTypes = {
    query: PropTypes.string,
    setQuery: PropTypes.func.isRequired,
+   history: PropTypes.shape().isRequired,
 };
 Search.defaultProps = {
    query: '',
 };
 
-export default Search;
+export default withRouter( Search );
