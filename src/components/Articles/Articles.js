@@ -13,7 +13,7 @@ const Articles = () => {
    const [ isLoaded, setIsLoaded ] = useState( false );
    const [ errorMessage, setErrorMessage ] = useState( '' );
    const [ query, setQuery ] = useState(
-      new URL( document.location.href ).searchParams.get( 'q' )
+      new URL( document.location.href ).searchParams.get( 'q' ) || ''
    );
 
    useEffect( () => {
