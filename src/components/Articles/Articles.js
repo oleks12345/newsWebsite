@@ -18,12 +18,9 @@ const Articles = () => {
 
       const query = url.searchParams.get( 'q' );
 
-      fetch(
-         `https://newsapi.org/v2/top-headlines?country=pl${
-            query ? '&q=' + query : ''
-         }&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`,
-         { signal: abortController.signal }
-      )
+      fetch( `https://oleks.pl/api/news/${query ? '&q=' + query : ''}`, {
+         signal: abortController.signal,
+      } )
          .then( ( res ) => res.json() )
          .then( ( data ) => {
             if ( data.status === 'ok' ) {
