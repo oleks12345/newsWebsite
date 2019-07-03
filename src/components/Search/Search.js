@@ -21,7 +21,7 @@ const Search = ( { query, setQuery } ) => {
       <SearchForm action="/" onSubmit={ formSubmit }>
          <SearchInput { ...searchInput } name="q" />
          <SearchButton type="submit">
-            <SearchImg src={ IconSearch } alt="" />{ ' ' }
+            <SearchImg src={ IconSearch } alt="submit" />{ ' ' }
          </SearchButton>
       </SearchForm>
    );
