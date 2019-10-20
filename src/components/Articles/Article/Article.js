@@ -7,6 +7,7 @@ import {
    ArticleImage,
    ArticleLink,
    ArticleDate,
+   StyledHr,
 } from './Article_style';
 
 const Article = ( { data } ) => {
@@ -54,6 +55,7 @@ const Article = ( { data } ) => {
                alt="article image"
             />
             <h3>{ data.title }</h3>
+            <StyledHr />
             <p>
                { cutDescriptionAtWhitespaceAfterNthLetter( data.description ) }
                <ArticleDate>{ cutDateAtDays( data.publishedAt ) }</ArticleDate>

@@ -26,6 +26,11 @@ export const ArticleLink = styled.a`
    color: inherit;
 `;
 
+export const StyledHr = styled.hr`
+   margin-top: -10px;
+   margin-bottom: -10px;
+`;
+
 export const ArticleImage = styled.img`
    width: 100%;
    display: block;
