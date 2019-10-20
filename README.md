@@ -18,3 +18,5 @@ server {
 }
 ```
 YOUR_PORT should be same as in *backend/.env* 
+
+remember that you need newsApi api key to use on backend 
