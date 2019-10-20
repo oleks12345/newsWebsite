@@ -13,7 +13,7 @@ export const SearchInput = styled.input`
    display: block;
    height: 35px;
    border: 1px solid ${( { theme } ) => theme.secondary};
-   border-radius: 10px;
+   border-radius: 12px;
    padding: 5px;
 `;
 
